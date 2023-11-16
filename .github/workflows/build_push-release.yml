@@ -26,7 +26,5 @@ jobs:
 
       - name: Push artefact to Github Packages
         run: mvn -B deploy -pl :pljava-api -DaltDeploymentRepository=githublatlon::default::https://maven.pkg.github.com/lat-lon/pljava
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
